@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>Beställ - Ruchi Restaurant</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">Ruchi</a>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">🏠 Hem</a></li>
+        <li><a href="menu.html">🍽️ Meny</a></li>
+        <li><a href="order.html">🛵 Beställ</a></li>
+      </ul>
+    </nav>
+
+    <section class="section">
+      <div class="Back">
+        <a href="index.html">Hem ></a>
+      </div>
+      <br>
+
+      <h2 class="section-title">Beställ Mat 🛵</h2>
+      <div class="delivery-buttons">
+        <a href="https://wolt.com/sv/swe/boras/restaurant/ruchi?srsltid=AfmBOorlFKVcCTjU8lZ1MJO0tCDicxkh_qiFyij2K4fjQHzoNYvgoe-T" target="_blank" class="btn">Beställ via Wolt 🛵</a>
+        <a href="https://www.foodora.se/restaurant/wvdo/ruchi?adpos=&utm_source=google&utm_medium=cpc&utm_campaign=15862844838&sem_tracker=15862844838&gad_source=1&gclid=CjwKCAjw--K_BhB5EiwAuwYoylg9VGWeCu4Dv6rszsb9ibbiNpRKMg9rVKRSaMCazj7OxH1dVlAWiBoC1EkQAvD_BwE" target="_blank" class="btn">Beställ via Foodora 🚲</a>
+        <a href="https://qopla.com/restaurant/ruchi/qEQLXMQwAr/order" target="_blank" class="btn">Beställ via Qobla 🛍️</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ruchi Restaurant</p>
+    </footer>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenuBtn.classList.toggle('active');
+          navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+          });
+        });
+            </script>
+  </body>
+</html>

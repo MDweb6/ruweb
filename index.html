@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <title>Ruchi Restaurant - Autentisk Indisk Mat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="logo">Ruchi</a>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html">🏠 Hem</a></li>
+        <li><a href="menu.html">🍽️ Meny</a></li>
+        <li><a href="order.html">🛵 Beställ</a></li>
+      </ul>
+    </nav>
+
+
+    <div class="floating-menu">
+      <a href="menu.html" class="floating-menu-button">
+        Se vår meny 🍽️
+      </a>
+    </div>
+
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Välkommen till Ruchi</h1>
+        <p>Ruchi – En smakresa i varje tugga 🍜✨</p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section-title">Om Oss 🌟</h2>
+      <div class="about-content">
+        <p>
+            Ruchi – En smakresa i varje tugga 🍜✨
+        </p>
+        <p>
+            Hos Ruchi kombinerar vi asiatiska smaker med moderna influenser för att skapa färgstarka och smakrika rätter. Vårt fokus ligger på kvalitet, kreativitet och att erbjuda något för alla – oavsett om du föredrar kött 🍗, vegetariskt eller veganskt 🌱.
+        </p>
+        <p>
+            Här hittar du handgjorda bao buns, fräscha bowls och innovativa sides – alltid tillagade med kärlek. Kom in och upplev street food på ett helt nytt sätt! ✨
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section" style="background-color: #f9f9f9;">
+      <h2 class="section-title">Kontakta Oss 📞</h2>
+      <div class="contact-info">
+        <p>📍 Storgatan 123, Stockholm</p>
+        <p>📞 08-123 45 67</p>
+        <p>📧 info@ruchi.se</p>
+        <p>⏰ Öppettider:</p>
+        <p>Måndag-Fredag: 11:00-20:00</p>
+        <p>Lördag: 13:00-23:00</p>
+        <p>Söndag: Stängt</p>
+      </div>
+
+      <div class="social-media">
+        <h3>Följ oss på sociala medier</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=100092735344289" target="_blank" class="social-icon">
+            <i class="fab fa-facebook"></i>
+          </a>
+
+          <a href="https://www.instagram.com/ruchi_room/" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+          </a>
+          
+          <a href="https://www.tiktok.com/@ruchi_room" target="_blank" class="social-icon">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Ruchi Restaurant</p>
+    </footer>
+
+    <script>
+// Mobile menu functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenuBtn.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenuBtn.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
+});
+    </script>
+  </body>
+</html>
